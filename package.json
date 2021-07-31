@@ -4,9 +4,10 @@
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
+    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "heroku-postbuild": "ng build --configuration production",
+    "heroku-postbuild": "ng build --prod",
     "e2e": "ng e2e"
   },
   "engines": {
@@ -15,8 +16,8 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/cli": "~11.2.6",
-    "@angular/compiler-cli": "~11.2.7",
+    "@angular/cli": "^11.2.6",
+    "@angular/compiler-cli": "^11.2.7",
     "@angular/animations": "~11.2.6",
     "@angular/cdk": "^11.2.13",
     "@angular/common": "~11.2.6",
@@ -36,8 +37,8 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1102.5",
-    "@angular/cli": "~11.2.6",
-    "@angular/compiler-cli": "~11.2.7",
+    "@angular/cli": "^11.2.6",
+    "@angular/compiler-cli": "^11.2.7",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
