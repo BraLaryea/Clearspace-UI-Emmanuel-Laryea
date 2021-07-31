@@ -1,0 +1,151 @@
+.navbar{
+    border-bottom: solid 2px rgb(209, 206, 206);
+    height: 40px;
+}
+
+mat-sidenav{
+    width: 25%;
+    border:thin solid white 
+}
+
+.nav-open-false{
+    margin: auto;
+    margin-top: 55px;
+    width: 50%;
+    height: 85vh; 
+}
+
+.side{
+    margin:0;
+    margin-top: 40px;
+    height: max-content;
+}
+
+.nav-open-true{
+    margin-top: 55px;
+    width: 65%;
+    height: 85vh; 
+}
+
+.btn{
+    background-color: white;
+    color: rgb(13 110 253);
+}
+
+.icon-box{
+    text-align: center;
+}
+
+.imgCtn{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    height: 50px;
+    width: 50px;
+    margin-bottom: 10%;
+}
+
+.img{
+    background:none;
+    border: none;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.icon-name{
+    margin: auto;
+    margin-bottom: 30%;
+    text-align: center;
+    cursor: pointer;
+}
+
+hr{
+    position: relative;
+    top: -20px;
+    width: 90%;
+}
+
+.topLinks{
+    display: none;
+}
+
+@media screen and (max-width: 925px) {
+    mat-sidenav{
+        width: 18%;
+        border:thin solid white;
+    }
+    .nav-open-true{
+        margin-top: 55px;
+        width: 90%;
+        height: 85vh; 
+    }
+    .nav-open-false{
+        margin: auto;
+        margin-top: 55px;
+        width: 90%;
+        height: 85vh; 
+    }
+    .side{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .icon-name{
+        text-align: center;
+    }
+    .icon-box{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .topLinks{
+        display: flex;
+        position: relative;
+        top: -5%;
+        margin: auto;
+        justify-content:space-evenly;
+        width: 100px;
+    }
+}
+@media screen and (max-width: 700px) {
+    mat-sidenav{
+        width: 25%;
+        border:thin solid white;
+    }
+    .nav-open-true{
+        margin-top: 55px;
+        width: 90%;
+        height: 85vh; 
+    }
+    .nav-open-false{
+        margin: auto;
+        margin-top: 55px;
+        width: 90%;
+        height: 85vh; 
+    }
+}
+
+@media screen and (max-width: 400px) {
+    mat-sidenav{
+        width: 25%;
+    }
+    .side{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .icon-name{
+        font-size: 12px;
+    }
+    .icon-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        left: -40%;
+    }
+}

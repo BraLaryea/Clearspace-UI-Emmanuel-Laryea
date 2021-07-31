@@ -1,0 +1,60 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+        <button (click)="sidenav.toggle(); navClosed$=!navClosed$;" mat-icon-button>
+            <mat-icon>menu</mat-icon>
+        </button>
+        <a class="navbar-brand" routerLink="#"><b>{{selected$}}</b></a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mx-auto">
+                <i class="fa fa-caret-square-o-down" aria-hidden="true"></i>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" routerLink="#"><i class="fa fa-search"
+                            aria-hidden="true"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="#"><i class="fa fa-bell-o" aria-hidden="true"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="#"><i class="fa fa-question-circle-o" aria-hidden="true"></i></a>
+                </li>
+            </ul>
+        </div>
+        <a class="nav-item" routerLink="#" style="text-decoration:none; color: black;">Default Test Accou...</a>
+    </div>
+</nav>
+
+<mat-sidenav-container>
+    <mat-sidenav opened mode="side" #sidenav>
+        <div class="row container side">
+            <div class="col-4 icon-box" *ngFor="let icon of icons">
+                <div class="imgCtn" [style.background-color]=icon.background>
+                    <img src={{icon.src}} class="img img-fluid img-thumbnail img-round" (click)="selected$ = icon.name">
+                </div>
+                <div class="icon-name">
+                    <small (click)="selected$ = icon.name">{{icon.name}}</small>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="topLinks">
+            <a routerLink="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+            <a routerLink="#"><i class="fa fa-bell-o" aria-hidden="true"></i></a>
+            <a routerLink="#"><i class="fa fa-question-circle-o" aria-hidden="true"></i></a>
+        </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="row container nav-open-{{navClosed$}}">
+            <app-home *ngIf="selected$ === 'Home'"></app-home>
+            <app-items *ngIf="selected$ === 'Items'"></app-items>
+            <app-orders *ngIf="selected$ === 'Orders'"></app-orders>
+            <app-reports *ngIf="selected$ === 'Reports'"></app-reports>
+            <app-team *ngIf="selected$ === 'Team'"></app-team>
+            <app-customers *ngIf="selected$ === 'Customers'"></app-customers>
+            <app-transactions *ngIf="selected$ === 'Transactions'"></app-transactions>
+            <app-acc-settings *ngIf="selected$ === 'Account & Settings'"></app-acc-settings>
+        </div>
+    </mat-sidenav-content>
+
+</mat-sidenav-container>
